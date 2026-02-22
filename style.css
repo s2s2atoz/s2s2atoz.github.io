@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* 상단 */
+.hero {
+  position: relative;
+  background: url("images/image1.jpg") center/cover no-repeat;
+  padding: 90px 20px 80px;
+  text-align: center;
+  color: #fff;
+}
+
+/* 어둡고 뿌연 필터 레이어 */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* 어두운 정도 조절 */
+}
+
+/* 글씨는 필터 위로 */
+.hero * {
+  position: relative;
+}
+
+
+.cta {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 14px 32px;
+  background: #084F51;
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* 섹션 */
+.section {
+  padding: 45px 18px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid #eeeeeee1;
+}
+
+/* 제목 */
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: #084F51;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* 리스트 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* 테이블 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #c8c8c8;;   /* 테이블 전체 테두리 */
+  border-radius: 12px;
+  overflow: hidden;         /* 둥근 모서리 유지 */
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #c8c8c8;  /* 줄 구분선 */
+  font-size: 15px;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;   /* 맨 아래 줄은 선 제거 */
+}
+
+th {
+  background: #f3faf7;   /* 왼쪽 컬럼 배경 */
+  color: #084F51;
+  width: 30%;
+  font-weight: 600;
+}
+
+/* 사진 */
+.photo-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 10px;
+}
+
+/* 지도 */
+iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 상담 */
+.contact {
+  background: #f3faf7;
+  text-align: center;
+
+  padding: 40px 20px;
+  margin: 60px auto;
+  border-radius: 20px;
+  max-width: 700px;
+}
+
+.call-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 30px;
+  background: #084F51;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 25px 0 40px;
+}
+
+/* 평면도 제목 */
+.plan-title {
+  margin: 28px 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #084F51;
+}
+
+/* 평면도 가로 스크롤 */
+.plan-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.plan-item {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 320px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.plan-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.plan-item p {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #084F51;
+}
+
+/* 이미지 클릭 가능 표시 */
+.zoom-img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.zoom-img:hover {
+  transform: scale(1.02);
+}
+
+/* 확대 모달 배경 */
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 확대 이미지 */
+.modal-content {
+  max-width: 92%;
+  max-height: 85%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+/* 닫기 버튼 */
+.img-modal .close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.point-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.point-box {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 14px 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.point-box strong {
+  display: block;
+  color: #084F51;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.point-box p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.soldout {
+  display: inline-block;
+  background-color: #e60023;
+  color: white;
+  font-size: 0.95em;
+  padding: 3px 7px;
+  border-radius: 5px;
+  margin-left: 6px;
+  font-weight: 600;
+}
