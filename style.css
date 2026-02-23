@@ -266,4 +266,14 @@ footer {
   border-radius: 5px;
   margin-left: 6px;
   font-weight: 600;
+
+}
+
+.seo-text {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
