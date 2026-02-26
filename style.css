@@ -277,3 +277,11 @@ footer {
   height: 1px;
   overflow: hidden;
 }
+
+.seo-visible {
+  max-width: 900px;
+  margin: 20px auto;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
